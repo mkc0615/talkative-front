@@ -1,5 +1,11 @@
 # Chat App Frontend Development Checklist
 
+> **Progress Note (June 2024):**
+> - Phase 1 (Foundation & Setup) is complete.
+> - Phase 2 (Core Chat Components): Sidebar, chat window, and all base UI components are implemented with mock data and design matching the reference image. Main app layout is responsive and functional.
+> - **Chat switching with Zustand is implemented in the UI, but there is a technical blocker with infinite loop errors in Next.js/Zustand integration.**
+> - Next step: Resolve the Zustand/Next.js infinite loop issue, then proceed to real-time features, authentication, and advanced chat functionality.
+
 ## 🎯 Project Overview
 - [x] Next.js 15.3.3 setup with App Router
 - [x] TypeScript configuration
@@ -9,20 +15,20 @@
 ## 📋 Phase 1: Foundation & Setup
 
 ### Project Structure & Configuration
-- [ ] Update project metadata (title, description, favicon)
-- [ ] Set up proper folder structure for components, hooks, types, utils
-- [ ] Configure environment variables for API endpoints
-- [ ] Set up proper TypeScript types for chat entities
-- [ ] Add ESLint and Prettier configuration
-- [ ] Set up Husky for pre-commit hooks
+- [x] Update project metadata (title, description, favicon)
+- [x] Set up proper folder structure for components, hooks, types, utils
+- [x] Configure environment variables for API endpoints (template created)
+- [x] Set up proper TypeScript types for chat entities
+- [x] Add ESLint and Prettier configuration
+- [x] Set up Husky for pre-commit hooks
 
 ### Design System & UI Foundation
-- [ ] Create design tokens (colors, spacing, typography)
-- [ ] Set up component library structure
-- [ ] Create base UI components (Button, Input, Card, etc.)
-- [ ] Implement responsive design breakpoints
-- [ ] Set up icon library (Lucide React or similar)
-- [ ] Create loading states and skeleton components
+- [x] Create design tokens (colors, spacing, typography)
+- [x] Set up component library structure
+- [x] Create base UI components (Button, Input, Card, Avatar, StatusDot)
+- [x] Implement responsive design breakpoints
+- [x] Set up icon library (Lucide React or similar) (structure in place, icons stubbed)
+- [x] Create loading states and skeleton components (structure ready)
 
 ## 📋 Phase 2: Core Chat Components
 
@@ -35,17 +41,18 @@
 - [ ] Add "Remember me" and password reset features
 
 ### Chat Interface Components
-- [ ] Create main chat layout (sidebar + main area)
-- [ ] Build conversation list component
-- [ ] Create message list component
-- [ ] Build message input component with emoji support
-- [ ] Add message bubble component
+- [x] Create main chat layout (sidebar + main area)
+- [x] Build conversation list component
+- [x] Create message list component
+- [x] Build message input component with emoji support (input and send button done, emoji picker pending)
+- [x] Add message bubble component
 - [ ] Implement typing indicators
-- [ ] Create message status indicators (sent, delivered, read)
+- [x] Create message status indicators (sent, delivered, read) (StatusDot ready)
+- [x] Implement chat switching (UI and Zustand store; technical blocker remains)
 
 ### Navigation & Layout
-- [ ] Create responsive navigation bar
-- [ ] Build sidebar for conversations/users
+- [x] Create responsive navigation bar (sidebar menu)
+- [x] Build sidebar for conversations/users
 - [ ] Implement mobile navigation drawer
 - [ ] Add breadcrumbs for navigation
 - [ ] Create settings/options menu
@@ -61,7 +68,7 @@
 - [ ] Add message read receipts
 
 ### Message Features
-- [ ] Support for text messages
+- [x] Support for text messages (UI only)
 - [ ] Add emoji picker and reactions
 - [ ] Implement file/image sharing
 - [ ] Add voice messages support
@@ -150,7 +157,7 @@
 ## 🛠 Technical Requirements
 
 ### Dependencies to Add
-- [ ] **State Management**: Zustand or Redux Toolkit
+- [x] **State Management**: Zustand (integrated, but technical blocker remains)
 - [ ] **Real-time**: Socket.io-client or WebSocket API
 - [ ] **UI Components**: Headless UI or Radix UI
 - [ ] **Icons**: Lucide React
@@ -178,21 +185,21 @@
 - [ ] Mobile performance optimization
 
 ## 🎨 Design Considerations
-- [ ] Modern, clean UI design
-- [ ] Consistent color scheme and branding
-- [ ] Smooth animations and transitions
-- [ ] Intuitive user flows
+- [x] Modern, clean UI design
+- [x] Consistent color scheme and branding
+- [x] Smooth animations and transitions (basic transitions in place)
+- [x] Intuitive user flows (MVP)
 - [ ] Accessibility compliance
 - [ ] Cross-browser compatibility
 
 ---
 
 ## 🚀 Quick Start Priorities (MVP)
-1. Basic chat interface with message sending
-2. User authentication
-3. Real-time message updates
-4. Responsive design
-5. Basic file sharing
+1. [x] Basic chat interface with message sending (UI only)
+2. [ ] User authentication
+3. [ ] Real-time message updates
+4. [x] Responsive design
+5. [ ] Basic file sharing
 
 ## 📊 Success Metrics
 - [ ] Message delivery time < 100ms
