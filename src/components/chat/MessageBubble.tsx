@@ -4,9 +4,10 @@ interface MessageBubbleProps {
   content: string;
   self?: boolean;
   status?: 'sending' | 'sent' | 'delivered' | 'read' | 'failed';
+  grouped?: boolean;
 }
 
-export const MessageBubble: React.FC<MessageBubbleProps> = ({ content, self, status }) => {
+export const MessageBubble: React.FC<MessageBubbleProps> = ({ content, self, status, grouped }) => {
   // Status indicator
   let statusIndicator = null;
   if (self && status) {
@@ -23,13 +24,25 @@ export const MessageBubble: React.FC<MessageBubbleProps> = ({ content, self, sta
     }
   }
 
+  // Asymmetric rounded corners
+  const bubbleShape = self
+    ? 'rounded-tl-2xl rounded-bl-2xl rounded-br-lg rounded-tr-2xl'
+    : 'rounded-tr-2xl rounded-br-2xl rounded-bl-lg rounded-tl-2xl';
+
+  // More vertical spacing between bubbles, less if grouped
+  const marginY = grouped ? 'my-1' : 'my-3';
+
   return (
     <div
-      className={`max-w-[70%] px-4 py-2 rounded-lg mb-2 text-sm break-words shadow-md flex items-end ${
+      className={`max-w-[70%] px-4 py-2 ${bubbleShape} ${marginY} text-sm break-words flex items-end border border-bg-bubble-self/40 shadow ${
         self
-          ? 'ml-auto bg-accent text-white rounded-br-lg rounded-tl-lg'
-          : 'mr-auto bg-bg-bubble-other text-text-main rounded-bl-lg rounded-tr-lg'
+          ? 'ml-auto bg-bg-bubble-self'
+          : 'mr-auto bg-bg-bubble-other'
       }`}
+      style={{
+        color: self ? 'var(--color-text-bubble-self)' : 'var(--color-text-bubble-other)',
+        boxShadow: '0 2px 8px 0 rgba(0,0,0,0.10)',
+      }}
     >
       <span>{content}</span>
       {statusIndicator}

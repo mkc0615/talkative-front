@@ -2,14 +2,16 @@
   /* Backgrounds */
   --color-bg-main: #232946;
   --color-bg-sidebar: #1a1a2e;
-  --color-bg-bubble-other: #2e2e48;
-  --color-bg-bubble-self: #5f6fff;
+  --color-bg-bubble-other: #000;
+  --color-bg-bubble-self: #000;
   --color-bg-input: #232946;
 
   /* Text */
   --color-text-main: #fff;
   --color-text-secondary: #b8b8d1;
   --color-text-accent: #5f6fff;
+  --color-text-bubble-other: #fff;
+  --color-text-bubble-self: #fff;
 
   /* Accent & Status */
   --color-accent: #5f6fff;

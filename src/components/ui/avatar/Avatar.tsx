@@ -27,10 +27,10 @@ export const Avatar: React.FC<AvatarProps> = ({ src, alt, size = 'md', status, c
         <img
           src={src}
           alt={alt}
-          className={`object-cover rounded-full w-full h-full border-2 border-bg-sidebar`}
+          className={`object-cover rounded-full w-full h-full border-2 border-white shadow`}
         />
       ) : (
-        <div className={`flex items-center justify-center rounded-full bg-bg-bubble-other text-text-main w-full h-full font-semibold uppercase`}>
+        <div className={`flex items-center justify-center rounded-full bg-bg-bubble-other text-text-main w-full h-full font-semibold uppercase border-2 border-white shadow`}>
           {children}
         </div>
       )}
