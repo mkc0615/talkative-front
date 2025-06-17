@@ -7,7 +7,7 @@ import { Button } from '../ui/button/Button';
 
 export const Sidebar: React.FC = () => {
   return (
-    <aside className="flex h-full bg-bg-sidebar">
+    <aside className="flex h-full bg-bg-sidebar text-text-main">
       {/* Vertical icon menu */}
       <SidebarMenu />
       {/* Main sidebar content */}

@@ -1,28 +1,35 @@
 :root {
   /* Backgrounds */
+  --color-bg-outer: #e3eafc;
   --color-bg-main: #232946;
-  --color-bg-sidebar: #1a1a2e;
-  --color-bg-bubble-other: #000;
-  --color-bg-bubble-self: #000;
-  --color-bg-input: #232946;
+  --color-bg-sidebar: #2a2d43;
+  --color-bg-bubble-other: #6b6e85;
+  --color-bg-bubble-self: #3f8cff;
+  --color-bg-input: #31344b;
 
   /* Text */
-  --color-text-main: #fff;
-  --color-text-secondary: #b8b8d1;
-  --color-text-accent: #5f6fff;
-  --color-text-bubble-other: #fff;
-  --color-text-bubble-self: #fff;
+  --color-text-main: #f4f4f8;
+  --color-text-secondary: #bfc3d9;
+  --color-text-accent: #3f8cff;
+  --color-text-bubble-other: #f4f4f8;
+  --color-text-bubble-self: #f4f4f8;
 
   /* Accent & Status */
-  --color-accent: #5f6fff;
-  --color-status-online: #52c41a;
-  --color-status-offline: #ff4d4f;
-  --color-status-unread: #5f6fff;
+  --color-accent: #3f8cff;
+  --color-status-online: #3fffa8;
+  --color-status-offline: #bfc3d9;
+  --color-status-unread: #3f8cff;
 
   /* Borders & Shadows */
-  --radius-lg: 1.25rem;
-  --radius-md: 0.75rem;
+  --radius-lg: 1.5rem;
+  --radius-md: 1rem;
   --shadow-md: 0 4px 24px 0 rgba(0,0,0,0.10);
+  --shadow-sm: 0 2px 8px 0 rgba(0,0,0,0.10);
+
+  /* Opacities */
+  --opacity-border: 0.2;
+  --opacity-hover: 0.6;
+  --opacity-active: 0.3;
 
   /* Spacing */
   --space-xs: 0.5rem;

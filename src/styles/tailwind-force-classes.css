@@ -1,0 +1,18 @@
+/* This file is only for forcing Tailwind to generate all custom color classes. */
+.bg-bg-main {}
+.bg-bg-sidebar {}
+.bg-bg-bubble-other {}
+.bg-bg-bubble-self {}
+.bg-bg-input {}
+.bg-bg-outer {}
+.text-text-main {}
+.text-text-secondary {}
+.text-text-accent {}
+.text-text-bubble-other {}
+.text-text-bubble-self {}
+.border-bg-bubble-other {}
+.border-bg-bubble-self {}
+.border-bg-main {}
+.border-bg-sidebar {}
+.border-bg-input {}
+.border-bg-outer {} 

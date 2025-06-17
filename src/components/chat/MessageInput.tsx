@@ -15,7 +15,7 @@ export const MessageInput: React.FC = () => {
   };
 
   return (
-    <form className="flex items-center gap-2 px-6 py-4 bg-bg-main border-t border-bg-bubble-other/40 relative">
+    <form className="flex items-center gap-2 px-6 py-4 bg-bg-main text-text-main border-t border-bg-bubble-other/40 relative">
       <Input
         className="flex-1 bg-bg-input text-text-main placeholder-text-secondary border-none shadow-none"
         placeholder="Send a message..."

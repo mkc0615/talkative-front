@@ -34,15 +34,10 @@ export const MessageBubble: React.FC<MessageBubbleProps> = ({ content, self, sta
 
   return (
     <div
-      className={`max-w-[70%] px-4 py-2 ${bubbleShape} ${marginY} text-sm break-words flex items-end border border-bg-bubble-self/40 shadow ${
-        self
-          ? 'ml-auto bg-bg-bubble-self'
-          : 'mr-auto bg-bg-bubble-other'
-      }`}
-      style={{
-        color: self ? 'var(--color-text-bubble-self)' : 'var(--color-text-bubble-other)',
-        boxShadow: '0 2px 8px 0 rgba(0,0,0,0.10)',
-      }}
+      className={`max-w-[70%] px-4 py-2 ${bubbleShape} ${marginY} text-sm break-words flex items-end border shadow-md ` +
+        (self
+          ? 'ml-auto bg-bg-bubble-self text-text-bubbleSelf border-bg-bubble-self/60'
+          : 'mr-auto bg-bg-bubble-other text-text-bubbleOther border-bg-bubble-other/60')}
     >
       <span>{content}</span>
       {statusIndicator}

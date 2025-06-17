@@ -24,7 +24,7 @@ export const ChatWindow: React.FC = () => {
   if (!conversation) return <div className="flex-1 flex items-center justify-center text-text-secondary">No conversation selected</div>;
 
   return (
-    <section className="flex flex-col flex-1 h-full bg-bg-main">
+    <section className="flex flex-col flex-1 h-full bg-bg-main text-text-main">
       <ChatHeader
         name={conversation.name}
         avatarSrc={conversation.avatarSrc}
@@ -36,3 +36,4 @@ export const ChatWindow: React.FC = () => {
     </section>
   );
 }; 
+ 
