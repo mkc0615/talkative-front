@@ -27,8 +27,8 @@ export const ChatWindow: React.FC = () => {
     <section className="flex flex-col flex-1 h-full bg-bg-main text-text-main">
       <ChatHeader
         name={conversation.name}
-        avatarSrc={conversation.avatarSrc}
-        role={conversation.role}
+        avatarSrc={conversation.participants[0]?.avatar}
+        role={conversation.participants[0]?.username}
       />
       <MessageList messages={filteredMessages} />
       {isTyping && <TypingIndicator name={conversation.name} />}

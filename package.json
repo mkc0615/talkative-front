@@ -24,9 +24,15 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
+    "20": "^3.1.9",
+    "@types/date-fns": "^2.5.3",
+    "axios": "^1.11.0",
+    "date-fns": "^4.1.0",
     "next": "15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "socket.io-client": "^4.8.1",
+    "zod": "^4.0.10",
     "zustand": "^5.0.5"
   },
   "devDependencies": {

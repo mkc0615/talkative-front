@@ -17,10 +17,10 @@ export const ConversationList: React.FC = () => {
         <ConversationListItem
           key={conv.id}
           name={conv.name}
-          avatarSrc={conv.avatarSrc}
-          lastMessage={conv.lastMessage}
-          time={conv.time}
-          status={conv.status}
+          avatarSrc={conv.participants[0]?.avatar}
+          lastMessage={conv.lastMessage?.content || ''}
+          time={conv.lastMessage?.timestamp ? new Date(conv.lastMessage.timestamp).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }) : ''}
+          status={conv.participants[0]?.status === 'online' ? 'online' : 'offline'}
           active={conv.id === selectedConversationId}
           onClick={() => selectConversation(conv.id)}
         />
